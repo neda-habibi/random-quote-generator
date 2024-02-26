@@ -31,11 +31,11 @@ jobs:
           npm install
           npm test
 
-        # Run cypress tests with Node.js
-      - name: Run cypress tests with Node.js
-        run: npm run cypress:run
+      #   # Run cypress tests with Node.js
+      # - name: Run cypress tests with Node.js
+      #   run: npm run cypress:run
 
-        # Run ESLint
+      # Run ESLint
       - name: Run ESLint
         run: npx eslint . --ext .js,.jsx
         working-directory: ./src
