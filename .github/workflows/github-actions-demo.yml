@@ -31,7 +31,11 @@ jobs:
           npm install
           npm test
 
-        # Install dependencies and run cypress tests with Node.js
-      - name: Install dependencies and run cypress tests with Node.js
-        run: |
-          npm cypress:run
+        # Run cypress tests with Node.js
+      - name: Run cypress tests with Node.js
+        run: npm run cypress:run
+
+        # Run ESLint
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx
+        working-directory: ./src
