@@ -20,5 +20,5 @@ import './commands'
 // require('./commands')
 
 {
-  "supportFile": false
+  "supportFile": false;
 }
