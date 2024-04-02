@@ -53,8 +53,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Initialize Amplify
-        run: amplify init --yes
+      # - name: Initialize Amplify
+      #   run: amplify init --yes
 
       - name: Deploy to Amplify
         run: amplify push --yes
