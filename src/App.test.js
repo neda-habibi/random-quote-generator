@@ -23,7 +23,7 @@ describe('<App />', () => {
 
   it('renders the header', () => {
     const { getByText } = render(<App />);
-    const header = getByText('Random Quote Generator');
+    const header = getByText('Welcome to Random Quote Generator');
     expect(header).toBeInTheDocument();
   });
 
