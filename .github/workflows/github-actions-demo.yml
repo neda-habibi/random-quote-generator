@@ -39,10 +39,7 @@ jobs:
       - name: Run ESLint
         run: npx eslint . --ext .js,.jsx
         working-directory: ./src
-  deploy:
-    runs-on: ubuntu-latest
 
-    steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
