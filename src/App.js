@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="header">Random Quote Generator</h1>
+      <h1 className="header">Welcome to Random Quote Generator</h1>
       <div className="quote-container">
         <blockquote>
           <p>{quote}</p>
