@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { auth } from './firebase';
+import Login from './Login';
 
 function App() {
+  const [user, setUser] = useState(null);
   const [quote, setQuote] = useState('');
   const [author, setAuthor] = useState('');
 
@@ -28,6 +31,22 @@ function App() {
   const getNewQuote = () => {
     fetchQuote();
   };
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  if (!user) {
+    return <Login setUser={setUser} />;
+  }
 
   return (
     <div className="App">
